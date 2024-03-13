@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment-6</title>
+    <!-- Tailwind CSS and Daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+    </style>
+
+    <!-- Font Awesome -->
+
+    <script
+      src="https://kit.fontawesome.com/14ec4d5bd8.js"
+      crossorigin="anonymous"
+    ></script>
+    
+  </head>
+  <body>
+    <header class="container mx-auto mt-10">
+      <div class="flex justify-between">
+        <div>
+          <h1 class="font-extrabold text-3xl">ReTro</h1>
+        </div>
+        <div class="items-center flex space-x-6">
+          <button title="home" class="rounded-full bg-gray-200 p-3">
+            <img src="images/Frame.svg" alt="Home" />
+          </button>
+          <button title="pen" class="rounded-full bg-gray-200 p-3">
+            <img src="images/pen.svg" alt="pen" />
+          </button>
+          <button title="request" class="rounded-full bg-gray-200 p-3">
+            <img src="images/request.svg" alt="request" />
+          </button>
+          <button title="flag" class="rounded-full bg-gray-200 p-3">
+            <img src="images/flag.svg" alt="Flag" />
+          </button>
+          <button class="rounded-full bg-[#797DFC] px-8 py-3 text-white">
+            Sign In
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- First banner Section -->
+      <div
+        class="container mt-16 mx-auto w-full h-full bg-no-repeat bg-[#12132D] rounded-lg p-32"
+        style="background-image: url('images/')"
+        ;
+      >
+        <!-- Full Banner section article and registered section -->
+        <!-- <img src="images/bgbanner.png" alt=""> -->
+        <div class="flex col-span-2 justify-between">
+          <!-- title and input section div -->
+          <div class="text-white">
+            <h1 class="font-extrabold text-6xl">
+              Welcome to the <br />
+              Retro Forum
+            </h1>
+            <p class="mt-5">
+              Share your favorite opinion and win and wp forum coffee mug!
+            </p>
+            <div class="rounded-full relative flex mt-8">
+              <input
+                id="search-feild"
+                type="text"
+                placeholder="Search here anything"
+                class="input input-bordered w-full rounded-3xl text-black font-semibold cursor-pointer"
+              />
+              <button
+                onclick="searchBar()"
+                class="bg-[#797DFC] absolute ml-[365px] mt-1 h-10 px-6 font-semibold rounded-full cursor-pointer"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+          <!-- Registered Users Section -->
+          <div
+            class="bg-white rounded-xl flex justify-around pt-16 text-center w-96 text-xl"
+          >
+            <div>
+              <h4>Registered Users</h4>
+              <h4>Forum</h4>
+              <h4>Topics</h4>
+              <h4>Replies</h4>
+            </div>
+            <div>
+              <h5>01</h5>
+              <h5>05</h5>
+              <h5>01</h5>
+              <h5>01</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Let's Discuss part -->
+      <div class="container mx-auto mt-14">
+        <!-- Head and paragraph -->
+        <div class="text-center space-y-3">
+          <h1 class="font-extrabold text-4xl">Let's Discuss</h1>
+          <p>
+            Could you please provide me with the main points or the topic of the article you'd like to discuss? <br> Once you share that information, we can delve into a discussion about its content.
+          </p>
+        </div>
+
+        <!-- Dual Card Container -->
+        <div class="grid grid-cols-2 mt-10 space-x-28">
+          <!-- Left Card -->
+          <section id="discuss-left-card">
+            <!-- category -->
+            <!-- <div class="bg-gray-200 flex justify-around p-10">
+             <div>
+              <img class="absolute" src="images/email 1.svg" alt="">
+              <span class="relative pl-5">5</span>
+             </div>
+             
+             <div>
+              <div class="flex space-x-3">
+                <p>#Music</p>
+                <p>Author: Kazi Mehedi Hasan</p>
+               </div>
+
+               <div class="">
+                <h1 class="font-semibold">10 Kids Unaware of Their Halloween Costume</h1>
+                <p>It’s one thing to subject yourself to ha Halloween costume mishap because, <br> hey that’s your prerogative</p>
+               </div>
+               
+               <div class="flex justify-between mt-4">
+                    <div class="flex  space-x-5">
+                        <div class="flex items-center space-x-2">
+                            <img src="images/tabler-icon-message-2.svg" alt="message icon">
+                            <p>560</p>
+                           </div>
+                           <div class="flex items-center space-x-2">
+                            <img src="images/tabler-icon-eye.svg" alt="eye icon">
+                            <p>1060</p>
+                           </div>
+                           <div class="flex items-center space-x-2">
+                            <img src="images/tabler-icon-clock-hour-9.svg" alt="Watch icon">
+                            <p>1020</p>
+                           </div>
+                    </div>
+                   <img src="images/email 1.svg" alt="">
+               </div>
+             </div>
+             </div> -->
+          </section>
+
+          <!-- Right Count Card -->
+
+          <section id="showRightSideData" class="bg-gray-200 rounded-2xl max-h-[650px]">
+            <div class="flex justify-between px-16 mt-6">
+              <h1 class="font-semibold text-xl">Title</h1>
+              <p id="countDown">Mark as read (<span id="countCardValue">0</span>)</p>
+            </div>
+
+            <!-- sub child card -->
+            <div id="rightSideCard">
+
+            </div>
+            
+          </section>
+        </div>
+      </div>
+
+      <!-- Join our forum banner -->
+      <section class="container bg-[#12132D] mx-auto mt-24 rounded-xl">
+        <div class="flex pt-14 justify-around">
+          <div class="mt-14 text-white py-3">
+            <h1 class="text-4xl font-extrabold">Join Our Forum</h1>
+            <p class="py-6">
+              Share your favorite opinion and win and wp forum coffee mug! Yes,
+              you can <br />
+              run unit tests and view the results directly within the app.
+            </p>
+            <button class="bg-[#797DFC] rounded-full p-3 px-5">
+              Registered Now
+            </button>
+          </div>
+          <div>
+            <img src="images/joinforum.png" alt="Join Forum banner" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Post Card -->
+
+      <div class="mt-20 text-center space-y-3">
+        <h1 class="font-extrabold text-4xl">Latest Posts</h1>
+        <p>
+          Yes, you can run unit tests and view the results directly within the
+          app. <br />
+          The integrated testing features allow for a streamlined .
+        </p>
+      </div>
+      <section
+        id="latestContainer"
+        class="container mx-auto mt-14 grid grid-cols-3"
+      >
+        <!-- <div class="space-x-10">
+          <div class="mt-10">
+            <div class="card w-96 p-2 bg-base-100 shadow-xl">
+              <figure class="px-10 pt-10">
+                <img
+                  src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                  alt="Shoes"
+                  class="rounded-xl"
+                />
+              </figure>
+              <div class="ml-10 mt-4">
+                <div class="flex space-x-2">
+                  <img src="images/calendar.svg" alt="" />
+                  <p>29 January 2024</p>
+                </div>
+                <div class="p-3 space-y-2">
+                  <h2 class="font-semibold">
+                    What will a mars habitat force that impact in our daily
+                    life!!!
+                  </h2>
+                  <p>
+                    Yes, you can run unit tests and view the results directly
+                    within the app.
+                  </p>
+                </div>
+                <div class="flex space-x-5">
+                  <img src="images/email 1.svg" alt="" />
+                  <div>
+                    <h3>Cameron Williamson</h3>
+                    <p>Unknown</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </section>
+    </main>
+
+    <footer class="bg-gray-200 text-center mt-20">
+      <div class="py-20 space-y-4">
+        <h1 class="font-extrabold text-3xl">ReTro</h1>
+        <p>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It
+          has roots in a <br />
+          piece of classical Latin literature from 45 BC
+        </p>
+        <div class="space-x-4">
+          <button><i class="fa-brands fa-twitter"></i></button>
+          <button><i class="fa-brands fa-facebook-f"></i></button>
+          <button><i class="fa-brands fa-instagram"></i></button>
+          <button><i class="fa-brands fa-github"></i></button>
+        </div>
+        <p>2024, All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+  <!-- Script -->
+  <script src="index.js"></script>
+</html>
+c
